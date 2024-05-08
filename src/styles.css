@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    padding-top: 0.1px;
+}
+
+.container {
+    border: 3px solid red;
+    border-radius: 10px;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#search-bar {
+    width: 100%;
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 3px solid red;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline: none;
+}
