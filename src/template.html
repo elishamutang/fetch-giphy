@@ -8,7 +8,18 @@
     </head>
     <body>
         <div class="container">
-            <input type="text" placeholder="Search a GIF" id="search-bar" name="search-bar">
+            <form id="search-gif">
+                <input type="text" placeholder="Search a GIF" id="search-bar" name="search-bar" required />
+                <button type="submit">Search</button>
+            </form>
+            <div id="gif-container">
+                <img src="" alt="" id="gif" />
+            </div>
+        </div>
+        <div class="author">
+            Made by
+            <span><a href="https://github.com/elishamutang">elishamutang</a></span>
+            <img src="" alt="" id="githubProf" />
         </div>
     </body>
 </html>

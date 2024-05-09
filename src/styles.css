@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --searchBar: #005b41;
+    --container: #008170;
+    --background: #aed8cc;
+}
+
 html {
     height: 100%;
 }
@@ -11,19 +17,27 @@ html {
 body {
     min-height: 100%;
     padding-top: 0.1px;
+    background-color: var(--background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
-    border: 3px solid red;
-    border-radius: 10px;
+    border: 5px solid var(--container);
     width: 600px;
     height: 500px;
     margin: 0 auto;
     margin-top: 100px;
+    background-color: white;
 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        'searchGIF'
+        'gif';
 }
 
 #search-bar {
@@ -32,8 +46,66 @@ body {
     padding: 20px;
     border-radius: 10px;
     border: none;
-    border-bottom: 3px solid red;
+    border-bottom: 5px solid var(--container);
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     outline: none;
+    grid-area: searchBar;
+}
+
+#search-gif {
+    width: 100%;
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'searchBar searchBtn';
+    grid-area: searchGIF;
+}
+
+button {
+    width: 100%;
+    font-size: 30px;
+    grid-area: searchBtn;
+    padding: 0 20px;
+    background-color: var(--searchBar);
+    border: 1px solid red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#gif-container {
+    margin: 10px;
+    grid-area: gif;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+img.active {
+    display: block;
+}
+
+.author {
+    border: 1px solid red;
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
 }
