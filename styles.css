@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --searchBar: #005b41;
+    --container: #008170;
+    --background: #aed8cc;
+}
+html {
+    height: 100%;
+}
+body {
+    align-items: center;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding-top: 0.1px;
+}
+.container {
+    background-color: #fff;
+    border: 5px solid var(--container);
+    display: grid;
+    grid-template-areas: 'searchGIF' 'gif';
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+    height: 500px;
+    margin: 100px auto 0;
+    width: 600px;
+}
+#search-bar {
+    border: none;
+    border-bottom: 5px solid var(--container);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 35px;
+    grid-area: searchBar;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+}
+#search-gif {
+    border-radius: 10px;
+    display: grid;
+    grid-area: searchGIF;
+    grid-template-areas: 'searchBar searchBtn';
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+button {
+    background-color: var(--searchBar);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+    grid-area: searchBtn;
+    opacity: 0.8;
+    padding: 0 20px;
+    transition: 0.3s;
+    width: 100%;
+}
+button:hover {
+    opacity: 1;
+}
+#gif-container {
+    background: #fff;
+    display: flex;
+    grid-area: gif;
+    justify-content: center;
+    margin: 10px;
+}
+img {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+img.active {
+    display: block;
+}
+.author {
+    border: 1px solid red;
+    margin-top: 50px;
+}
+a {
+    font-size: 18px;
+    text-decoration: none;
+}
