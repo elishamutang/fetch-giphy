@@ -3,9 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>To Do List</title>
+        <title></title>
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <script defer="defer" src="main.js"></script>
+        <link href="styles.css" rel="stylesheet" />
     </head>
-    <body></body>
+    <body>
+        <div class="container">
+            <form id="search-gif">
+                <input placeholder="Search a GIF" id="search-bar" name="search-bar" required />
+                <button type="submit">Search</button>
+            </form>
+            <div id="gif-container"><img src="" alt="" id="gif" /></div>
+        </div>
+        <div class="author">
+            Made by <span><a href="https://github.com/elishamutang">elishamutang</a></span>
+            <img src="" alt="" id="githubProf" />
+        </div>
+    </body>
 </html>
