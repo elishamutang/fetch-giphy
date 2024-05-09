@@ -39,7 +39,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: '',
+            title: 'GIF Generator',
             filename: 'index.html',
             template: 'src/template.html',
         }),
