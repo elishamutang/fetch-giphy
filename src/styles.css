@@ -93,15 +93,17 @@ button:hover {
 img {
     height: 100%;
     width: 100%;
+}
+
+#gif {
     display: none;
 }
 
-img.active {
+#gif.active {
     display: block;
 }
 
 .author {
-    border: 1px solid red;
     margin-top: 50px;
 }
 

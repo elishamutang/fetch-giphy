@@ -1,14 +1,10 @@
 import styles from './styles.css'
 import myKey from '../ignore/myKey.js'
-import github from './assets/github-mark.png'
 
 const form = document.querySelector('form')
 const imageElem = document.getElementById('gif')
 
-const githubLogo = document.getElementById('githubProf')
-githubLogo.src = github
-
-githubLogo.src = form.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const formData = new FormData(form)

@@ -73,15 +73,16 @@ button:hover {
     margin: 10px;
 }
 img {
-    display: none;
     height: 100%;
     width: 100%;
 }
-img.active {
+#gif {
+    display: none;
+}
+#gif.active {
     display: block;
 }
 .author {
-    border: 1px solid red;
     margin-top: 50px;
 }
 a {
